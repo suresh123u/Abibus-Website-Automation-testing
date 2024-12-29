@@ -36,15 +36,16 @@ Programming Language: Java
 5. Key Selenium Features Used:
 6. WebElement interactions (click, sendKeys, etc.)
 7. Locators like XPath and ID.
-Handling dynamic elements (lists and loops).
-Cucumber Annotations
-@Given: To set up the initial state (e.g., opening the website).
-@When: To define the user's actions (e.g., selecting cities, date, and seat).
-@Then: To validate the final outcome (e.g., proceeding to payment).
-Improvements/Extensions
-Error Handling: Add exception handling for possible errors like ElementClickInterceptedException or stale element references.
-Dynamic Inputs: Enhance input handling for real-time data or parameterization through a configuration file.
-Reporting: Integrate Cucumber reporting tools like Extent Reports for detailed test results.
-Cross-Browser Testing: Extend compatibility to other browsers like Chrome and Firefox.
-Data-Driven Testing: Use external data sources like Excel or JSON for dynamic test inputs.
-This project ensures an end-to-end automation of the bus ticket booking process, making it efficient, reliable, and user-friendly.
+8. Handling dynamic elements (lists and loops).
+## Cucumber Annotations
+1. @Given: To set up the initial state (e.g., opening the website).
+2. @When: To define the user's actions (e.g., selecting cities, date, and seat).
+3. @Then: To validate the final outcome (e.g., proceeding to payment).
+## Improvements/Extensions
+1. Error Handling: Add exception handling for possible errors like ElementClickInterceptedException or stale element references.
+2. Dynamic Inputs: Enhance input handling for real-time data or parameterization through a configuration file.
+3. Reporting: Integrate Cucumber reporting tools like Extent Reports for detailed test results.
+4. Cross-Browser Testing: Extend compatibility to other browsers like Chrome and Firefox.
+5. Data-Driven Testing: Use external data sources like Excel or JSON for dynamic test inputs.
+
+##This project ensures an end-to-end automation of the bus ticket booking process, making it efficient, reliable, and user-friendly.
