@@ -29,13 +29,13 @@ Proceeds to the payment page, ensuring all prerequisites are completed.
 ## Technical Details
 Programming Language: Java
 ## Frameworks and Tools:
-Cucumber: For BDD implementation.
-Selenium WebDriver: For browser automation.
-WebDriverManager: For managing browser drivers dynamically.
-Browser: Microsoft Edge
-Key Selenium Features Used:
-WebElement interactions (click, sendKeys, etc.)
-Locators like XPath and ID.
+1. Cucumber: For BDD implementation.
+2. Selenium WebDriver: For browser automation.
+3. WebDriverManager: For managing browser drivers dynamically.
+4. Browser: Microsoft Edge
+5. Key Selenium Features Used:
+6. WebElement interactions (click, sendKeys, etc.)
+7. Locators like XPath and ID.
 Handling dynamic elements (lists and loops).
 Cucumber Annotations
 @Given: To set up the initial state (e.g., opening the website).
