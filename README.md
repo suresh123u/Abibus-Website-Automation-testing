@@ -48,4 +48,4 @@ Programming Language: Java
 4. Cross-Browser Testing: Extend compatibility to other browsers like Chrome and Firefox.
 5. Data-Driven Testing: Use external data sources like Excel or JSON for dynamic test inputs.
 
-##This project ensures an end-to-end automation of the bus ticket booking process, making it efficient, reliable, and user-friendly.
+## This project ensures an end-to-end automation of the bus ticket booking process, making it efficient, reliable, and user-friendly.
