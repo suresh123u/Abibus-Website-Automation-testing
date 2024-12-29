@@ -1,0 +1,89 @@
+package StepDefinition;
+
+
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.edge.EdgeDriver;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class BusTicket {
+	
+	WebDriver driver;
+
+@Given("the user opens the Abhibus website")
+public void the_user_opens_the_abhibus_website() throws InterruptedException
+{
+        WebDriverManager.edgedriver().setup();
+        driver= new EdgeDriver();
+        driver.get("https://www.abhibus.com/");
+        driver.manage().window().maximize();
+        Thread.sleep(3000);
+		
+	}
+
+@When("the user selects {string} as origin and {string} as destination")
+public void the_user_selects_as_origin_and_as_destination(String string, String string2) throws InterruptedException 
+{
+
+	   driver.findElement(By.xpath("//input[@placeholder='From Station']")).sendKeys("Hyderabad");
+	        driver.findElement(By.xpath("//input[@placeholder='From Station']")).sendKeys(Keys.ENTER);
+	        driver.findElement(By.xpath("//input[@placeholder='To Station']")).sendKeys("Bangalore");
+	        driver.findElement(By.xpath("//input[@placeholder='To Station']")).sendKeys(Keys.ENTER);
+	        Thread.sleep(3000);
+	        
+}
+@When("the user select {string} as the travel date")
+public void the_user_select_as_the_travel_date(String string) throws InterruptedException
+{
+	 driver.findElement(By.xpath("//input[@placeholder='Onward Journey Date']")).click();
+     driver.findElement(By.xpath("//button[text()='Tomorrow']")).click();
+     Thread.sleep(3000);
+      
+}
+@When("select the price drop and three Bus partners")
+public void select_the_price_drop_and_three_bus_partners() throws InterruptedException
+{
+	WebElement Checkbox = driver.findElement(By.id("price-drop"));
+	Checkbox.click();
+	  Thread.sleep(3000);
+	  driver.findElement(By.xpath("//div[text()='Bus Partner']")).click();
+	  List<WebElement> c = driver.findElements(By.xpath("//div[@class='scrollable-container  primary ']//input"));
+	  for(int i=2; i<c.size() && i<5 ;i++) 
+		{
+			c.get(i).click();		
+		}
+	  Thread.sleep(5000);
+}	  
+ @When("the user select the Show Seats and select the seat no.")
+	  public void the_user_select_the_show_seats_and_select_the_seat_no() throws InterruptedException
+ {
+	 driver.findElement(By.xpath("//button[text()='Select Seats'][1]")).click();
+	 Thread.sleep(5000);
+	 driver.findElement(By.xpath("//span[text()='5U']")).click();
+	 Thread.sleep(5000);
+}
+ @When("the user select the Broading Point and Dropping Point")
+ public void the_user_select_the_broading_point_and_dropping_point() throws InterruptedException 
+ {
+	 driver.findElement(By.xpath("//p[text()='Miyapur (Pickup Van)']")).click();
+	 Thread.sleep(3000);
+	 driver.findElement(By.xpath("//p[text()='Devanahalli']")).click();
+	 Thread.sleep(3000);
+	 
+ }
+   
+ @Then("the user proceeds to payment")
+ public void the_user_proceeds_to_payment()
+ {
+    driver.findElement(By.xpath("//div[text()='Continue']")).click();
+}
+}
